@@ -1,0 +1,29 @@
+@mixin media ($device_size){
+// 1200 - 900 -> lg
+// 900 - 700 -> md
+// 700 - 500 -> sm
+// 500 - 0 -> xs
+
+@if $device_size == lg{
+    @media (max-width: 1200px){
+      @content;  
+    }
+}
+@if $device_size == md{
+    @media (max-width: 900px){
+        @content;
+    }
+}
+@if $device_size == sm{
+    @media (max-width: 700px){
+        @content;
+    }
+}
+@if $device_size == xs{
+    @media (max-width: 500px){
+        @content;
+    }
+}
+
+
+}

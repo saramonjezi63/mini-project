@@ -1,0 +1,17 @@
+.order-form {
+    max-width: 300px;
+    margin: auto;
+    background-color: $gray;
+    border: 1px solid $light_blue;
+    padding: 20px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    label {
+      display: block;
+    }
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: 100%;
+    }
+  }

@@ -1,0 +1,52 @@
+.main-menu {
+  list-style: none;
+  text-align: center;
+  li {
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 3px solid transparent;
+  }
+  > li {
+    border-bottom: 3px solid transparent;
+  }
+  > li:hover {
+    border-color: $primary_color;
+    cursor: pointer;
+  }
+}
+
+.submenu {
+  opacity: 0;
+  position: absolute;
+  background-color: $white;
+  top: 42px;
+  right: 0;
+  padding: 0;
+  text-align: right;
+  width: 150px;
+  max-height: 150px;
+  overflow-y: scroll;
+  transition: opacity 1s linear, visibility 0s linear 1s;
+  display: flex;
+  flex-direction: column;
+  visibility: hidden;
+}
+
+.submenu li {
+  padding: 5px;
+  &:hover {
+    background-color: $green;
+    color: $white;
+  }
+}
+
+.has-submenu {
+  position: relative;
+  &:hover {
+    .submenu {
+      opacity: 1;
+      visibility: visible;
+      transition-delay: 0s;
+    }
+  }
+}

@@ -1,0 +1,30 @@
+footer{
+  position: relative;
+  margin-top: 200px;
+    background-color: $primary_color;
+  padding: 50px 20px;
+}
+
+
+.footer-img {
+  position: absolute;
+  left: 0;
+  right:0;
+  top: 0;
+  transform: translateY(-80%);
+  z-index: -1;
+  }
+    .check-list {
+      list-style: none;
+      li {
+        line-height: 35px;
+  
+      &::before {
+        content: "\f00c";
+        font-family: $icon-font-family ;
+        font-weight: $icon-font-weight;
+        margin-left: 8px;
+      }
+      }
+    }
+ 
